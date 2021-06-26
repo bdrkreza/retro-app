@@ -9,6 +9,7 @@ import About from "./page/About/About";
 import Contact from "./page/Contact/Contact";
 import Home from "./page/Home/Home";
 import Dashboard from "./Dashboard/Dashboard/Dashboard";
+import PostEdit from "./Dashboard/SideMenu/PostEdit/PostEdit";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/editPost/:EditId" component={PostEdit} />
           <Route path="*" component={NoMatch} />
         </Switch>
       </Router>

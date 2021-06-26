@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import SideBar from '../SideBar/SideBar';
 import DashHeader from '../DashHeader/DashHeader';
+import Overview from '../SideMenu/Overview/Overview';
+import BlogPosts from '../SideMenu/blogPosts/BlogPosts';
+import Settings from '../SideMenu/Settings/Settings';
+import DashboardAvatar from '../DashboardAvatar/DashboardAvater';
+import AddPosts from '../SideMenu/AddPosts/AddPosts';
+import RecentPost from '../SideMenu/RecentPost/RecentPost';
+import ReadPosts from '../SideMenu/ReadPost/ReadPosts';
+import PostEdit from '../SideMenu/PostEdit/PostEdit';
 
 // const myStyle = {
 //     background: '#191919'
@@ -21,14 +29,13 @@ const Dashboard = () => {
 
                 {/*  Site header */}
                 <DashHeader sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+                <DashboardAvatar url={url} />
                 <Switch >
-                    {/* <Route path={`${path}/dashboard`} component={Dashboard} /> */}
-                    {/* <Route path={`${path}/orders`} component={Orders} />
-                    <Route path={`${path}/stores`} component={Stores} />
-                    <Route path={`${path}/blogs`} component={Blogs} />
+                    <Route path={`${path}/overview`} component={Overview} />
+                    <Route path={`${path}/blogPosts`} component={BlogPosts} />
                     <Route path={`${path}/settings`} component={Settings} />
-                    <Route path={`${path}/shipment`} component={Shipment} />
-                    <Route path={`${path}/employee`} component={Employee} /> */}
+                    <Route path={`${path}/addPosts`} component={AddPosts} />
+                    <Route path={`${path}/editPost`} component={PostEdit} />
                 </Switch>
             </div>
         </div>

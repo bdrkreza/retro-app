@@ -65,7 +65,7 @@ function Sidebar({
                     </div>
 
                     {/* Links */}
-                    <SideBarCard />
+                    <SideBarCard url={url} />
                 </div>
             </div>
         </div>
